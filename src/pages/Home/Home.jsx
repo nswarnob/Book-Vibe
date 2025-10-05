@@ -1,9 +1,16 @@
 import React from 'react';
+import Banner from '../../components/Banner/Banner';
+import Books from '../BooksFolder/Books';
+import { useLoaderData } from 'react-router';
 
 const Home = () => {
+    
+const data = useLoaderData()
+
     return (
         <div>
-            <p>Hello Home</p>
+            <Banner></Banner>
+            <Books data={data} ></Books>
         </div>
     );
 };
